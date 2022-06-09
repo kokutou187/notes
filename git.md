@@ -159,7 +159,7 @@ xpora-copy-images-to: upload
 
 `git stash` 贮藏当前的工作内容（包括索引区和工作目录）
                      list  查看贮藏的东西
-                     apply  默认使用最近的贮藏，可以指定 apply stash@{indexNum}
+                     apply  默认使用最近的贮藏，可以指定 apply --index num
                                  --index 还尝试恢复索引区的内容，即原封不动地恢复索引区和工作目录，不然全部恢复到索引区
                      drop  stash@{indexNum} 删除某个贮藏
                      --keep-index 贮藏并且保留在索引区中

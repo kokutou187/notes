@@ -14,3 +14,10 @@
 
 ### ubuntu configure
 
+```bash
+# ~/.bashrc
+export PS1="\[\e[36m\][\u \A @\W] $ \[\e[m\]"
+# bash
+$ gsettings set org.gnome.mutter center-new-windows true
+```
+

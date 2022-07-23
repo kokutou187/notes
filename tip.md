@@ -34,6 +34,9 @@ GRUB_CMDLINE_LINUX_DEFAULT="quiet acpi_osi=Linux cpi_backlight=vendor"
 
 ### ubuntu command
 ```shell
+# &> stderr stdout 都重定向, 末尾的 & 表示命令在后台执行
+$ cd ~/picgo && nohup ./AppRun &>/dev/null &
+
 $ snap changes   // see a list of ongoing changes
 $ snap abort ID  // abort ongoing change
 ```

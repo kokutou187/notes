@@ -32,3 +32,8 @@ $ sudo gedit /etc/default/grub
 GRUB_CMDLINE_LINUX_DEFAULT="quiet acpi_osi=Linux cpi_backlight=vendor"
 ```
 
+### ubuntu command
+```shell
+$ snap changes   // see a list of ongoing changes
+$ snap abort ID  // abort ongoing change
+```

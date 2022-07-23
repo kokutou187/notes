@@ -29,9 +29,9 @@
 > >   
 > >   - 多线程环境中线程交替执行，由于编译器优化重排的存在，两个线程中使用的变量能够保证一致性是无法确定的，结果无法预测
 > >   
-> >   ![my02](![](https://raw.githubusercontent.com/kokutou187/notes/master/images/my02.png))
+> >   ![my02](https://raw.githubusercontent.com/kokutou187/notes/master/images/my02.png)
 > >   
-> >   ![my03](![](https://raw.githubusercontent.com/kokutou187/notes/master/images/my03.png))
+> >   ![my03](https://raw.githubusercontent.com/kokutou187/notes/master/images/my03.png)
 >
 > 2）JMM（Java Memory Model，Java内存模型） 你谈谈
 >
@@ -45,7 +45,7 @@
 > >
 > > 由于 JVM 运行程序的实体是线程，而每个线程创建时 JVM 都会为其创建一个<span style="color:red">工作内存（有些地方称为栈空间，指的应该是对应某个或某几个线程的栈帧中的OS（操作数栈）,以及操作数栈进行运算完以后会写入的LV局部变量表，然后主内存指的应该是堆或者方法区。）</span>，工作内存是每个线程的私有数据区域 ，而 Java 内存模型中规定所有变量都存储在<span style="color:red">主内存</span>，所有线程都可以访问，<span style="color:red">但线程对变量的操作（读取赋值等）必须在工作内存中进行，首先要将变量从主内存拷贝到自己的工作内存空间，然后对变量进行操作，操作完成后再将变量写回主内存</span>，不能直接操作主内存中的变量，各个线程中的工作内存中存储着主内存中的<span style="color:blue">变量副本拷贝，因此不同的线程间无法访问对方的工作内存</span>，线程间的通信（传值）必须通过主内存来完成，其简要访问过程如下图：
 > >
-> > <img src="![my01](https://raw.githubusercontent.com/kokutou187/notes/master/images/my01.png)" alt="my01" style="zoom:67%;" />
+> > <img src="https://raw.githubusercontent.com/kokutou187/notes/master/images/my01.png" alt="my01" style="zoom:67%;" />
 > >
 > > JMM 的特性：
 > >

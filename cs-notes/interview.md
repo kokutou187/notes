@@ -48,7 +48,7 @@
 
   - MSS（Maximum Segment Size，TCP建立连接后双方约定的可传输的最大TCP报文长度），如果 MTU是1500，那么 MSS = 1500 - 20(IP Header) - 20(TCP Header) = 1460byte
 
-  - ![01](C:\Users\pansi\Desktop\笔记收纳所\面试\images\01.jpg)
+  - ![01](../images/cs-notes/01.jpg)
 
   - 出现粘包的原因
 
